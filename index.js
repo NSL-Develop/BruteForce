@@ -4,13 +4,13 @@ const privateKeyToAddress = require('ethereum-private-key-to-address');
 var providers = ethers.providers;
 
 const readJson = (file) => {
-	return JSON.parse(fs.readFileSync(__dirname + "/" + file));
+	return JSON.parse(fs.readFileSync(file));
 };
 const writeJson = (file, json) => {
-	fs.writeFileSync(__dirname + "/" + file, JSON.stringify(json));
+	fs.writeFileSync(file, JSON.stringify(json));
 };
 const existsFile = (file) => {
-	return fs.existsSync(__dirname + "/" + file);
+	return fs.existsSync(file);
 };
 
 function getValidBalance(privateKey) {
